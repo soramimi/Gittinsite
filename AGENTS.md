@@ -1,4 +1,4 @@
-# このリポジトリでの作業
+# Gittinsite での作業
 
 実装・設計に着手する前に [PLAN.md](PLAN.md) の対象マイルストーンと完了条件を確認する。開発環境、ビルド、デプロイの手順は [README.md](README.md) を参照する。
 
@@ -7,7 +7,7 @@
 - Gradle プロジェクトのルートは `app/`。Android アプリのモジュールは `app/app/`。
 - アプリのソース、マニフェスト、リソースは `app/app/src/main/`。テストは `app/app/src/test/` と `app/app/src/androidTest/`。
 - ルートの `Makefile` は `app/scripts/` のスクリプトを呼び出す。SDK や JDK の既定値、引数、起動対象を変更するときは、README の手順も照合する。
-- 現行アプリは Kotlin の Hello World。MVP の最低対応バージョンは Android 11（API 30）で、現行ビルドの `minSdk` は 24。
+- Gittinsite の起動画面は M1 のリポジトリ一覧。JGit の操作は `app/app/src/main/`、端末上の往復試験は `app/app/src/androidTest/` に置く。対応 OS は Android 11（API 30）以上。
 
 ## 実装方針
 

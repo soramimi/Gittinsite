@@ -35,6 +35,6 @@ fi
 # -t は android:testOnly が付いた APK のインストールを許可する。
 "$adb" -s "$serial" install -r -t "$apk"
 
-# インストールに成功した端末で、アプリ ID と Activity 名を指定して起動する。
+# インストールに成功した端末で、アプリ ID と Activity の完全修飾名を指定して起動する。
 # -W を付けると、起動処理の結果が返るまで待機する。
-exec "$adb" -s "$serial" shell am start -W -n com.example.myapplication/.MainActivity
+exec "$adb" -s "$serial" shell am start -W -n jp.soramimi.gittinsite/com.example.myapplication.MainActivity

@@ -7,10 +7,10 @@
 # ?= は SERIAL が未定義の場合だけ設定する。既定値は USB 接続の実機の番号。
 # 別の端末を使う場合は make deploy SERIAL=端末のシリアル番号 で上書きできる。
 # SERIAL= と空にすると、deploy.sh の既定値である emulator-5554 が使われる。
-SERIAL ?= K5AXB76157379AL
+SERIAL ?= RFCT40J1FNZ
 
 # 同名のファイルやディレクトリがあっても、指定したレシピを毎回実行する。
-.PHONY: build emulator deploy
+.PHONY: build emulator deploy devices
 
 # 引数なしの make では、最初の通常ターゲットである build が選ばれる。
 # Gradle Wrapper でデバッグ APK を生成する。
@@ -27,3 +27,6 @@ emulator:
 # 実機なら USB デバッグを許可し、エミュレーターなら Android の起動を待つ。
 deploy:
 	./app/scripts/deploy.sh "$(SERIAL)"
+
+devices:
+	/home/soramimi/Android/Sdk/platform-tools/adb devices -l
